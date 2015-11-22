@@ -9,5 +9,7 @@
 import UIKit
 
 class AppDataEntity: NSObject {
-
+    
+    var appID = 0
+    var appTitle = "" 
 }

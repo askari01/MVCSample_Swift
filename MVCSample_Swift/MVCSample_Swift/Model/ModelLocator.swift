@@ -9,5 +9,13 @@
 import UIKit
 
 class ModelLocator: NSObject {
+    
+    let rankingModel:RankingModel
+    
+    static let sharedInstance = ModelLocator()
+    
+    override init() {
+        self.rankingModel = RankingModel()
+    }
 
 }

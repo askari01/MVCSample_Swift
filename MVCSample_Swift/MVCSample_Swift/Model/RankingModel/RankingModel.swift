@@ -10,19 +10,26 @@ import UIKit
 
 class RankingModel: NSObject {
     
-    var rankingAppDataEntities:NSMutableArray = []
+    var rankingAppDataEntities:[AppDataEntity] = []
     
     func loadAppStoreData() {
-        
-        let entity = AppDataEntity()
-        entity.appID = 1
-        entity.appTitle = "パズドラ"
-        
-        // addObjectではKBO通知されないので手動通知
-        self.willChangeValueForKey("rankingAppDataEntities")
-        self.rankingAppDataEntities.addObject(entity)
-        self.didChangeValueForKey("rankingAppDataEntities")
-        
-    }
 
+        RankingDataAPIManager.loadAppStoreRankingData({ (rankingData:NSArray) in
+            
+            // addObjectではKBO通知されないので手動通知
+            self.willChangeValueForKey("rankingAppDataEntities")
+            
+            for var i = 0 ; i < rankingData.count ; i++ {
+                
+                let dict:NSDictionary = rankingData.objectAtIndex(i) as! NSDictionary
+                
+                let entity = AppDataEntity()
+                entity.appID = dict.objectForKey("appID") as! Int
+                entity.appTitle = dict.objectForKey("appTitle") as! String
+                self.rankingAppDataEntities.append(entity)
+            }
+            
+            self.didChangeValueForKey("rankingAppDataEntities")
+        })
+    }
 }

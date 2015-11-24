@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol RankingTableViewDelegate {
+    func didSelect()
+}
+
 class RankingTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
 
+    var rankingTableViewDelegate: RankingTableViewDelegate?
+    
     override func awakeFromNib() {
         
         self.delegate = self
@@ -42,6 +48,7 @@ class RankingTableView: UITableView, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        rankingTableViewDelegate?.didSelect()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,7 +59,7 @@ class RankingTableView: UITableView, UITableViewDelegate, UITableViewDataSource 
         
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
         
-        let entity = ModelLocator.sharedInstance.rankingModel.rankingAppDataEntities.objectAtIndex(indexPath.row) as! AppDataEntity
+        let entity = ModelLocator.sharedInstance.rankingModel.rankingAppDataEntities[indexPath.row]
         cell.textLabel?.text = entity.appTitle as String
     
         return cell

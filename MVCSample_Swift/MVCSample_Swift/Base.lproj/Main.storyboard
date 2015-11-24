@@ -45,6 +45,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="O8k-TP-ilf"/>
+                    <connections>
+                        <outlet property="rankingTableView" destination="eyA-M9-skk" id="cEC-px-THp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

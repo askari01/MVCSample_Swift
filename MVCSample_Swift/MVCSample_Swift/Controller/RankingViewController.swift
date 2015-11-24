@@ -8,15 +8,22 @@
 
 import UIKit
 
-class RankingViewController: UIViewController {
+class RankingViewController: UIViewController, RankingTableViewDelegate {
 
+    @IBOutlet weak var rankingTableView: RankingTableView!
+   
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        self.rankingTableView.rankingTableViewDelegate = self
     }
 
     override func didReceiveMemoryWarning() {
         
         super.didReceiveMemoryWarning()
+    }
+    
+    func didSelect() {
+        print("選択されました")
     }
 }

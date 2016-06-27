@@ -21,14 +21,14 @@ class RankingTableView: UITableView, UITableViewDelegate, UITableViewDataSource 
         self.delegate = self
         self.dataSource = self
         
-        // KVO監視
-        ModelLocator.sharedInstance.rankingModel.addObserver(self, forKeyPath: "rankingAppDataEntities", options: .New, context: nil)
+        // KVO Monitoring
+        ModelLocator.sharedInstance.rankingModel.addObserver(self, forKeyPath: "rankingAppDataEntities", options: .new, context: nil)
         refreshData()
     }
     
     deinit {
         
-        // KVO削除
+        // KVO Delete
         ModelLocator.sharedInstance.rankingModel.removeObserver(self, forKeyPath: "rankingAppDataEntities")
     }
     
@@ -37,29 +37,29 @@ class RankingTableView: UITableView, UITableViewDelegate, UITableViewDataSource 
         ModelLocator.sharedInstance.rankingModel.loadAppStoreData()
     }
     
-    override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+    override func observeValue(forKeyPath keyPath: String?, of object: AnyObject?, change: [NSKeyValueChangeKey : AnyObject]?, context: UnsafeMutablePointer<Void>?) {
         
-        dispatch_async(dispatch_get_main_queue(),{
+        DispatchQueue.main.async(execute: {
             if keyPath == "rankingAppDataEntities" {
                 self.reloadData()
             }
         });
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         rankingTableViewDelegate?.didSelect()
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ModelLocator.sharedInstance.rankingModel.rankingAppDataEntities.count;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "Cell")
         
-        let entity = ModelLocator.sharedInstance.rankingModel.rankingAppDataEntities[indexPath.row]
+        let entity = ModelLocator.sharedInstance.rankingModel.rankingAppDataEntities[(indexPath as NSIndexPath).row]
         cell.textLabel?.text = entity.appTitle as String
     
         return cell

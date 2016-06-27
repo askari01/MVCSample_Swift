@@ -24,6 +24,6 @@ class RankingViewController: UIViewController, RankingTableViewDelegate {
     }
     
     func didSelect() {
-        print("選択されました")
+        print("It has been chosen")
     }
 }

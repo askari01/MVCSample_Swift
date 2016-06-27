@@ -10,15 +10,15 @@
 		A27CEF741C01C10C00C185E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A27CEF731C01C10C00C185E2 /* Assets.xcassets */; };
 		A27CEF821C01C10C00C185E2 /* MVCSample_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CEF811C01C10C00C185E2 /* MVCSample_SwiftTests.swift */; };
 		A27CEF8D1C01C10C00C185E2 /* MVCSample_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CEF8C1C01C10C00C185E2 /* MVCSample_SwiftUITests.swift */; };
-		A27CEFA41C01C1DC00C185E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CEF9B1C01C1DC00C185E2 /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		A27CEFA71C01C29400C185E2 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CEFA61C01C29400C185E2 /* RankingViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		A27CEFA91C01C2AC00C185E2 /* ModelLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CEFA81C01C2AC00C185E2 /* ModelLocator.swift */; settings = {ASSET_TAGS = (); }; };
-		A27CEFAB1C01C2BA00C185E2 /* RankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CEFAA1C01C2BA00C185E2 /* RankingModel.swift */; settings = {ASSET_TAGS = (); }; };
-		A27CEFAD1C01C2C800C185E2 /* AppDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CEFAC1C01C2C800C185E2 /* AppDataEntity.swift */; settings = {ASSET_TAGS = (); }; };
-		A27CEFAF1C01C2DC00C185E2 /* RankingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CEFAE1C01C2DC00C185E2 /* RankingTableView.swift */; settings = {ASSET_TAGS = (); }; };
-		A27CEFB11C01C2F000C185E2 /* RankingDataAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CEFB01C01C2F000C185E2 /* RankingDataAPIManager.swift */; settings = {ASSET_TAGS = (); }; };
-		A27CEFB61C01C48F00C185E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A27CEFB21C01C48F00C185E2 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		A27CEFB71C01C48F00C185E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A27CEFB41C01C48F00C185E2 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		A27CEFA41C01C1DC00C185E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CEF9B1C01C1DC00C185E2 /* AppDelegate.swift */; };
+		A27CEFA71C01C29400C185E2 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CEFA61C01C29400C185E2 /* RankingViewController.swift */; };
+		A27CEFA91C01C2AC00C185E2 /* ModelLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CEFA81C01C2AC00C185E2 /* ModelLocator.swift */; };
+		A27CEFAB1C01C2BA00C185E2 /* RankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CEFAA1C01C2BA00C185E2 /* RankingModel.swift */; };
+		A27CEFAD1C01C2C800C185E2 /* AppDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CEFAC1C01C2C800C185E2 /* AppDataEntity.swift */; };
+		A27CEFAF1C01C2DC00C185E2 /* RankingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CEFAE1C01C2DC00C185E2 /* RankingTableView.swift */; };
+		A27CEFB11C01C2F000C185E2 /* RankingDataAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27CEFB01C01C2F000C185E2 /* RankingDataAPIManager.swift */; };
+		A27CEFB61C01C48F00C185E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A27CEFB21C01C48F00C185E2 /* LaunchScreen.storyboard */; };
+		A27CEFB71C01C48F00C185E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A27CEFB41C01C48F00C185E2 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -282,18 +282,23 @@
 		A27CEF611C01C10C00C185E2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "inaba masaya";
 				TargetAttributes = {
 					A27CEF681C01C10C00C185E2 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = Y674B9FK8P;
+						DevelopmentTeamName = "Syed Zaidi (Personal Team)";
+						LastSwiftMigration = 0800;
 					};
 					A27CEF7C1C01C10C00C185E2 = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = A27CEF681C01C10C00C185E2;
 					};
 					A27CEF871C01C10C00C185E2 = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = A27CEF681C01C10C00C185E2;
 					};
 				};
@@ -500,6 +505,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "masaya.inaba.MVCSample-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -511,6 +517,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "masaya.inaba.MVCSample-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -522,6 +530,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "masaya.inaba.MVCSample-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVCSample_Swift.app/MVCSample_Swift";
 			};
 			name = Debug;
@@ -534,6 +543,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "masaya.inaba.MVCSample-SwiftTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVCSample_Swift.app/MVCSample_Swift";
 			};
 			name = Release;
@@ -545,6 +556,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "masaya.inaba.MVCSample-SwiftUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = MVCSample_Swift;
 				USES_XCTRUNNER = YES;
 			};
@@ -557,6 +569,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "masaya.inaba.MVCSample-SwiftUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = MVCSample_Swift;
 				USES_XCTRUNNER = YES;
 			};

@@ -16,20 +16,20 @@ class RankingModel: NSObject {
 
         RankingDataAPIManager.loadAppStoreRankingData({ (rankingData:NSArray) in
             
-            // addObjectではKBO通知されないので手動通知
-            self.willChangeValueForKey("rankingAppDataEntities")
+            // addObject Manual notification because in not KBO notification
+            self.willChangeValue(forKey: "rankingAppDataEntities")
             
-            for var i = 0 ; i < rankingData.count ; i++ {
+            for i in  (0 ..< rankingData.count) {
                 
-                let dict:NSDictionary = rankingData.objectAtIndex(i) as! NSDictionary
+                let dict:NSDictionary = rankingData.object(at: i) as! NSDictionary
                 
                 let entity = AppDataEntity()
-                entity.appID = dict.objectForKey("appID") as! Int
-                entity.appTitle = dict.objectForKey("appTitle") as! String
+                entity.appID = dict.object(forKey: "appID") as! Int
+                entity.appTitle = dict.object(forKey: "appTitle") as! String
                 self.rankingAppDataEntities.append(entity)
             }
             
-            self.didChangeValueForKey("rankingAppDataEntities")
+            self.didChangeValue(forKey: "rankingAppDataEntities")
         })
     }
 }
